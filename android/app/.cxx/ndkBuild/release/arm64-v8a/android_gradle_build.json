@@ -1,0 +1,54 @@
+{
+  "buildFiles": [
+    "D:\\DESARROLLO\\OTROS\\ZENT\\MOVIL\\APP\\turtlecoin-mobile-wallet\\android\\app\\src\\main\\jni\\Android.mk",
+    "D:\\DESARROLLO\\OTROS\\ZENT\\MOVIL\\APP\\turtlecoin-mobile-wallet\\android\\app\\src\\main\\jni\\Application.mk"
+  ],
+  "cleanCommands": [
+    "D:\\android-sdk\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\DESARROLLO\\OTROS\\ZENT\\MOVIL\\APP\\turtlecoin-mobile-wallet\\android\\app\\src\\main\\jni\\Android.mk NDK_APPLICATION_MK\u003dD:\\DESARROLLO\\OTROS\\ZENT\\MOVIL\\APP\\turtlecoin-mobile-wallet\\android\\app\\src\\main\\jni\\Application.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003dD:/DESARROLLO/OTROS/ZENT/MOVIL/APP/turtlecoin-mobile-wallet/android/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\DESARROLLO\\OTROS\\ZENT\\MOVIL\\APP\\turtlecoin-mobile-wallet\\android\\app\\build\\intermediates\\ndkBuild\\release\\lib clean"
+  ],
+  "buildTargetsCommand": "D:\\android-sdk\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\DESARROLLO\\OTROS\\ZENT\\MOVIL\\APP\\turtlecoin-mobile-wallet\\android\\app\\src\\main\\jni\\Android.mk NDK_APPLICATION_MK\u003dD:\\DESARROLLO\\OTROS\\ZENT\\MOVIL\\APP\\turtlecoin-mobile-wallet\\android\\app\\src\\main\\jni\\Application.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003dD:/DESARROLLO/OTROS/ZENT/MOVIL/APP/turtlecoin-mobile-wallet/android/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\DESARROLLO\\OTROS\\ZENT\\MOVIL\\APP\\turtlecoin-mobile-wallet\\android\\app\\build\\intermediates\\ndkBuild\\release\\lib {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "TurtleCoin_jni-release-arm64-v8a": {
+      "buildCommand": "D:\\android-sdk\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\DESARROLLO\\OTROS\\ZENT\\MOVIL\\APP\\turtlecoin-mobile-wallet\\android\\app\\src\\main\\jni\\Android.mk NDK_APPLICATION_MK\u003dD:\\DESARROLLO\\OTROS\\ZENT\\MOVIL\\APP\\turtlecoin-mobile-wallet\\android\\app\\src\\main\\jni\\Application.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003dD:/DESARROLLO/OTROS/ZENT/MOVIL/APP/turtlecoin-mobile-wallet/android/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\DESARROLLO\\OTROS\\ZENT\\MOVIL\\APP\\turtlecoin-mobile-wallet\\android\\app\\build\\intermediates\\ndkBuild\\release\\lib D:/DESARROLLO/OTROS/ZENT/MOVIL/APP/turtlecoin-mobile-wallet/android/app/build/intermediates/ndkBuild/release/obj/local/arm64-v8a/libTurtleCoin_jni.so",
+      "toolchain": "toolchain-arm64-v8a",
+      "abi": "arm64-v8a",
+      "artifactName": "TurtleCoin_jni",
+      "files": [
+        {
+          "src": "D:\\DESARROLLO\\OTROS\\ZENT\\MOVIL\\APP\\turtlecoin-mobile-wallet\\android\\app\\src\\main\\jni\\TurtleCoin.cpp",
+          "flags": "-target aarch64-none-linux-android21 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot D:/android-sdk/ndk-bundle/build//../toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fno-exceptions -fno-rtti -fpic -O2 -DNDEBUG -ID:/android-sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include -ID:/android-sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++abi/include -ID:/DESARROLLO/OTROS/ZENT/MOVIL/APP/turtlecoin-mobile-wallet/android/app/src/main/jni -std\u003dc++11 -O3 -O3 -std\u003dc++17 -DANDROID -nostdinc++ -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "D:\\DESARROLLO\\OTROS\\ZENT\\MOVIL\\APP\\turtlecoin-mobile-wallet\\android\\app\\src\\main\\jni\\crypto-ops-data.cpp",
+          "flags": "-target aarch64-none-linux-android21 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot D:/android-sdk/ndk-bundle/build//../toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fno-exceptions -fno-rtti -fpic -O2 -DNDEBUG -ID:/android-sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include -ID:/android-sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++abi/include -ID:/DESARROLLO/OTROS/ZENT/MOVIL/APP/turtlecoin-mobile-wallet/android/app/src/main/jni -std\u003dc++11 -O3 -O3 -std\u003dc++17 -DANDROID -nostdinc++ -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "D:\\DESARROLLO\\OTROS\\ZENT\\MOVIL\\APP\\turtlecoin-mobile-wallet\\android\\app\\src\\main\\jni\\crypto-ops.cpp",
+          "flags": "-target aarch64-none-linux-android21 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot D:/android-sdk/ndk-bundle/build//../toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fno-exceptions -fno-rtti -fpic -O2 -DNDEBUG -ID:/android-sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include -ID:/android-sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++abi/include -ID:/DESARROLLO/OTROS/ZENT/MOVIL/APP/turtlecoin-mobile-wallet/android/app/src/main/jni -std\u003dc++11 -O3 -O3 -std\u003dc++17 -DANDROID -nostdinc++ -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "D:\\DESARROLLO\\OTROS\\ZENT\\MOVIL\\APP\\turtlecoin-mobile-wallet\\android\\app\\src\\main\\jni\\crypto.cpp",
+          "flags": "-target aarch64-none-linux-android21 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot D:/android-sdk/ndk-bundle/build//../toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fno-exceptions -fno-rtti -fpic -O2 -DNDEBUG -ID:/android-sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include -ID:/android-sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++abi/include -ID:/DESARROLLO/OTROS/ZENT/MOVIL/APP/turtlecoin-mobile-wallet/android/app/src/main/jni -std\u003dc++11 -O3 -O3 -std\u003dc++17 -DANDROID -nostdinc++ -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "D:\\DESARROLLO\\OTROS\\ZENT\\MOVIL\\APP\\turtlecoin-mobile-wallet\\android\\app\\src\\main\\jni\\hash.cpp",
+          "flags": "-target aarch64-none-linux-android21 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot D:/android-sdk/ndk-bundle/build//../toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fno-exceptions -fno-rtti -fpic -O2 -DNDEBUG -ID:/android-sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include -ID:/android-sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++abi/include -ID:/DESARROLLO/OTROS/ZENT/MOVIL/APP/turtlecoin-mobile-wallet/android/app/src/main/jni -std\u003dc++11 -O3 -O3 -std\u003dc++17 -DANDROID -nostdinc++ -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "D:\\DESARROLLO\\OTROS\\ZENT\\MOVIL\\APP\\turtlecoin-mobile-wallet\\android\\app\\src\\main\\jni\\keccak.cpp",
+          "flags": "-target aarch64-none-linux-android21 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot D:/android-sdk/ndk-bundle/build//../toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fno-exceptions -fno-rtti -fpic -O2 -DNDEBUG -ID:/android-sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++/include -ID:/android-sdk/ndk-bundle/build//../sources/cxx-stl/llvm-libc++abi/include -ID:/DESARROLLO/OTROS/ZENT/MOVIL/APP/turtlecoin-mobile-wallet/android/app/src/main/jni -std\u003dc++11 -O3 -O3 -std\u003dc++17 -DANDROID -nostdinc++ -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        }
+      ],
+      "output": "D:\\DESARROLLO\\OTROS\\ZENT\\MOVIL\\APP\\turtlecoin-mobile-wallet\\android\\app\\build\\intermediates\\ndkBuild\\release\\obj\\local\\arm64-v8a\\libTurtleCoin_jni.so"
+    }
+  },
+  "toolchains": {
+    "toolchain-arm64-v8a": {
+      "cppCompilerExecutable": "D:\\android-sdk\\ndk-bundle\\build\\..\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}
