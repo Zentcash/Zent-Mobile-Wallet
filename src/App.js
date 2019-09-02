@@ -269,14 +269,9 @@ const HomeNavigator = createBottomTabNavigator({
 
             return <IconComponent name = {
                 iconName
-            }
-            size = {
+            } size = {
                 25
-            }
-            color = {
-                tintColor
-            }
-            />;
+            } color = { tintColor } />;
         },
     }),
 });
@@ -399,17 +394,15 @@ export default class App extends React.Component {
             this.state.screenProps
         }
         />;
-        const notLoadedComponent = < View > < /View>;
+        const notLoadedComponent = <View></View>;
 
-        return ( <
-            View style = {
+        return ( <View style = {
                 {
                     flex: 1
                 }
             } > {
                 this.state.loaded ? loadedComponent : notLoadedComponent
-            } <
-            /View>
+            } </View>
         );
     }
 }
