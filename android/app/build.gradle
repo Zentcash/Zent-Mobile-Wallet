@@ -79,9 +79,9 @@ project.ext.react = [
     entryFile: "index.js",
     enableHermes: false,  // clean and rebuild if changing
     nodeExecutableAndArgs: ["node", "--max-old-space-size=8192"],
-	bundleInStaging: true, 
-    bundleInInternalTest: true,
-    bundleInRelease: true
+	bundleInDebug: false,
+	bundleInRelease: true,
+	root: "../../"
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"
