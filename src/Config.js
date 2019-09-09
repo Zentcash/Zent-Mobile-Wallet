@@ -91,15 +91,10 @@ const Config = {
      * Mapping of height to mixin maximum and mixin minimum
      */
     mixinLimits: new MixinLimits([
-        /* Height: 440,000, minMixin: 0, maxMixin: 100, defaultMixin: 3 */
-        new MixinLimit(440000, 0, 100, 3),
+        /* Height: 150,000, minMixin: 3, maxMixin: 3, defaultMixin: 3 */
+        new MixinLimit(150000, 3, 3, 3),
 
-        /* At height of 620000, static mixin of 7 */
-        new MixinLimit(620000, 3),
-
-        /* At height of 800000, static mixin of 3 */
-        new MixinLimit(800000, 3),
-    ], 3 /* Default mixin of 3 before block 440,000 */),
+    ], 3 /* Default mixin of 3 before block 150,000 */),
 
     /**
      * The length of a standard address for your coin
@@ -183,7 +178,7 @@ const Config = {
      * Default daemon to use. Can either be a BlockchainCacheApi(baseURL, SSL),
      * or a ConventionalDaemon(url, port).
      */
-    defaultDaemon: new Daemon('seedpro3.zent.cash', 443, true, true),
+    defaultDaemon: new Daemon('seedpro2.zent.cash', 21688, true, true),
 
     /**
      * A link to where a bug can be reported for your wallet. Please update
