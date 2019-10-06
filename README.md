@@ -9,6 +9,10 @@
 
 ### Running
 
+* adb -s <device name> reverse tcp:8081 tcp:8081
+* adb -s 377290937cf5 reverse tcp:8081 tcp:8081
+
+
 * `node --max-old-space-size=8192 node_modules/react-native/local-cli/cli.js start` (Just need to run this once to start the server, leave it running)
 * `react-native run-android`
 

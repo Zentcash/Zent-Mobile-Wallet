@@ -54,7 +54,7 @@ export class QrScannerScreen extends React.Component {
                 <QRCodeScanner
                     onRead={(code) => {
                         this.props.navigation.goBack();
-                        this.props.navigation.state.params.setAddress(code.data);
+                        this.props.navigation.state.params.setAddress(code.data.address);
                     }}
                     cameraProps={{captureAudio: false}}
                 />
