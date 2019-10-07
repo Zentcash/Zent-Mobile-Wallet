@@ -11,95 +11,100 @@ import {
     deriveSecretKey, generateKeyImage,
 } from './NativeCode';
 
-const Config = {
+const Config = new function() {
     /**
      * If you can't figure this one out, I don't have high hopes
      */
-    coinName: 'ZentCash',
+    this.coinName = 'ZentCash';
 
     /**
      * Prefix for URI encoded addresses
      */
-    uriPrefix: 'zentcash://',
+    this.uriPrefix = 'zentcash://';
 
     /**
      * How often to save the wallet, in milliseconds
      */
-    walletSaveFrequency: 60 * 1000,
+    this.walletSaveFrequency = 60 * 1000;
 
     /**
      * The amount of decimal places your coin has, e.g. TurtleCoin has two
      * decimals
      */
-    decimalPlaces: 2,
+    this.decimalPlaces = 2;
 
     /**
      * The address prefix your coin uses - you can find this in CryptoNoteConfig.h.
      * In TurtleCoin, this converts to TRTL
      */
-    addressPrefix: 4419,
+    this.addressPrefix = 4419;
 
     /**
      * Request timeout for daemon operations in milliseconds
      */
-    requestTimeout: 10 * 1000,
+    this.requestTimeout = 10 * 1000;
 
     /**
      * The block time of your coin, in seconds
      */
-    blockTargetTime: 60,
+    this.blockTargetTime = 60;
 
     /**
      * How often to process blocks, in millseconds
      */
-    syncThreadInterval: 4,
+    this.syncThreadInterval = 4;
 
     /**
      * How often to update the daemon info, in milliseconds
      */
-    daemonUpdateInterval: 10 * 1000,
+    this.daemonUpdateInterval = 10 * 1000;
 
     /**
      * How often to check on locked transactions
      */
-    lockedTransactionsCheckInterval: 10 * 3000,
+    this.lockedTransactionsCheckInterval = 10 * 3000;
 
     /**
      * The amount of blocks to process per 'tick' of the mainloop. Note: too
      * high a value will cause the event loop to be blocked, and your interaction
      * to be laggy.
      */
-    blocksPerTick: 1,
+    this.blocksPerTick = 1;
 
     /**
      * Your coins 'ticker', generally used to refer to the coin, i.e. 123 TRTL
      */
-    ticker: 'ZTC',
+    this.ticker = 'ZTC';
 
     /**
      * Most people haven't mined any blocks, so lets not waste time scanning
      * them
      */
-    scanCoinbaseTransactions: false,
+    this.scanCoinbaseTransactions = false;
 
     /**
      * The minimum fee allowed for transactions, in ATOMIC units
      */
-    minimumFee: 10,
+    this.minimumFee = 10;
 
     /**
      * Mapping of height to mixin maximum and mixin minimum
      */
-    mixinLimits: new MixinLimits([
-        /* Height: 150,000, minMixin: 3, maxMixin: 3, defaultMixin: 3 */
-        new MixinLimit(150000, 3, 3, 3),
+    this.mixinLimits = new MixinLimits([
+        /* Height: 440,000, minMixin: 0, maxMixin: 100, defaultMixin: 3 */
+        new MixinLimit(0, 3, 3, 3),
 
-    ], 3 /* Default mixin of 3 before block 150,000 */),
+        /* At height of 620000, static mixin of 7 */
+        new MixinLimit(11000, 0, 3, 0),
+
+        /* At height of 800000, static mixin of 3 */
+        new MixinLimit(150000, 3, 3, 3),
+    ], 3 /* Default mixin of 3 before block 440,000 */);
 
     /**
      * The length of a standard address for your coin
      */
-    standardAddressLength: 97,
+    this.standardAddressLength = 97;
 
     /**
      * The length of an integrated address for your coin - It's the same as
@@ -108,42 +113,42 @@ const Config = {
      * chunks of 8 chars at once into blocks of 11 chars, we can calculate
      * this automatically
      */
-    integratedAddressLength: 97 + ((64 * 11) / 8),
+    this.integratedAddressLength = 97 + ((64 * 11) / 8);
 
     /**
      * Use our native func instead of JS slowness
      */
-    derivePublicKey: Platform.OS === 'ios' ? undefined : derivePublicKey,
+    this.derivePublicKey = Platform.OS === 'ios' ? undefined : derivePublicKey;
 
     /**
      * Use our native func instead of JS slowness
      */
-    generateKeyDerivation: Platform.OS === 'ios' ? undefined : generateKeyDerivation,
+    this.generateKeyDerivation = Platform.OS === 'ios' ? undefined : generateKeyDerivation;
 
     /**
      * Use our native func instead of JS slowness
      */
-    generateRingSignatures: Platform.OS === 'ios' ? undefined : generateRingSignatures,
+    this.generateRingSignatures = Platform.OS === 'ios' ? undefined : generateRingSignatures;
 
     /**
      * Use our native func instead of JS slowness
      */
-    deriveSecretKey: Platform.OS === 'ios' ? undefined : deriveSecretKey,
+    this.deriveSecretKey = Platform.OS === 'ios' ? undefined : deriveSecretKey;
 
     /**
      * Use our native func instead of JS slowness
      */
-    generateKeyImage: Platform.OS === 'ios' ? undefined : generateKeyImage,
+    this.generateKeyImage = Platform.OS === 'ios' ? undefined : generateKeyImage;
 
     /**
      * Memory to use for storing downloaded blocks - 3MB
      */
-    blockStoreMemoryLimit: 1024 * 1024 * 3,
+    this.blockStoreMemoryLimit = 1024 * 1024 * 3;
 
     /**
      * Amount of blocks to request from the daemon at once
      */
-    blocksPerDaemonRequest: 100,
+    this.blocksPerDaemonRequest = 100;
 
     /**
      * Unix timestamp of the time your chain was launched.
@@ -153,17 +158,17 @@ const Config = {
      * should be equal to your current block count. If it's significantly different,
      * you can offset your timestamp to fix the discrepancy
      */
-    chainLaunchTimestamp: new Date(1000 * 1513031505),
+    this.chainLaunchTimestamp = new Date(1000 * 1512800692);
 
     /**
      * Fee to take on all transactions, in percentage
      */
-    devFeePercentage: 0.0,
+    this.devFeePercentage = 0.0;
 
     /**
      * Address to send dev fee to
      */
-    devFeeAddress: 'Ze55uhNg8i3FbPqeGptkeGFqTYj21mW9ECSJxwDSmDutGJiuCUUZNpFdvoh9HZSx3uQfJuyD4Uf821p3FsweXuJj1MmBF9SNA',
+    this.devFeeAddress = 'Ze55uhNg8i3FbPqeGptkeGFqTYj21mW9ECSJxwDSmDutGJiuCUUZNpFdvoh9HZSx3uQfJuyD4Uf821p3FsweXuJj1MmBF9SNA';
 
     /**
      * Base url for price API
@@ -172,51 +177,57 @@ const Config = {
      * you just set this to an empty string. If you have another API you want
      * it to support, you're going to have to modify the code in Currency.js.
      */
-    priceApiLink: 'https://api.coingecko.com/api/v3/simple/price',
+    this.priceApiLink = 'https://api.coingecko.com/api/v3/simple/price';
 
     /**
      * Default daemon to use. Can either be a BlockchainCacheApi(baseURL, SSL),
      * or a ConventionalDaemon(url, port).
+     * defaultDaemon: new Daemon('seedpro2.zent.cash', 21698, false, false),
      */
-    defaultDaemon: new Daemon('seedpro2.zent.cash', 21698, false, false),
+    this.defaultDaemon = new Daemon('seedpro3.zent.cash', 443);
 
     /**
      * A link to where a bug can be reported for your wallet. Please update
      * this if you are forking, so we don't get reported bugs for your wallet...
      *
      */
-    repoLink: 'https://github.com/Zentcash/Zent-Mobile-Wallet/issues',
+    this.repoLink = 'https://github.com/Zentcash/Zent-Mobile-Wallet/issues';
 
     /**
      * This only controls the name in the settings screen.
      */
-    appName: 'Zent Cash Mobile Wallet',
+    this.appName = 'Zent Cash Mobile Wallet';
+
+    /** 
+     * Customer user agent string for wallet backend requests
+     */
+    this.customUserAgentString = this.appName.toLowerCase() + '-da-greatest!';
 
     /**
      * Slogan phrase during wallet CreateScreen
      */
-    sloganCreateScreen: 'Fast. Safe. Easy.',
+    this.sloganCreateScreen = 'Fast. Safe. Easy.';
 
     /**
      * Displayed in the settings screen
      */
-    appVersion: 'v1.0.3',
+    this.appVersion = 'v1.0.4';
 
     /**
      * Base URL for us to chuck a hash on the end, and find a transaction
      */
-    explorerBaseURL: 'http://zent.cash/block-explorer-beta/?search=',
+    this.explorerBaseURL = 'http://zent.cash/block-explorer-beta/?search=';
 
     /**
      * A link to your app on the Apple app store. Currently blank because we
      * haven't released for iOS yet...
      */
-    appStoreLink: '',
+    this.appStoreLink = '';
 
     /**
      * A link to your app on the google play store
      */
-    googlePlayLink: 'https://play.google.com/store/apps/details?id=cash.zent.mobileapp',
+    this.googlePlayLink = 'https://play.google.com/store/apps/details?id=cash.zent.mobileapp';
 };
 
 module.exports = Config;

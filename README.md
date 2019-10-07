@@ -1,17 +1,20 @@
-# TonChan - A mobile, native TurtleCoin wallet
-
-![Screenshot](https://i.imgur.com/F5LMYKl.png)
+# Zent Cash Movile - A mobile, native TurtleCoin wallet
 
 ### Initial Setup
 
 * `cd TonChan`
 * `yarn install`
+* `npm i jetifier`
+* `npx jetify`
+* Crear fichero sentry.properties dentro de la carpeta **Android**
+```text
+defaults.project=zentcash
+defaults.org=zentcash
+auth.token=6efd75e3606a4552921b2610c1ebc42ec19d3440082b40b08fdd2db21069cf00
+```
+
 
 ### Running
-
-* adb -s <device name> reverse tcp:8081 tcp:8081
-* adb -s 377290937cf5 reverse tcp:8081 tcp:8081
-
 
 * `node --max-old-space-size=8192 node_modules/react-native/local-cli/cli.js start` (Just need to run this once to start the server, leave it running)
 * `react-native run-android`
