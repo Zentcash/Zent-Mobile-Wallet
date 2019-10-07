@@ -1,8 +1,8 @@
-# Zent Cash Movile - A mobile, native TurtleCoin wallet
+# Zent Cash Movile - A mobile, native Zent Cash wallet
 
 ### Initial Setup
 
-* `cd TonChan`
+* `cd Zent-Mobile-Wallet`
 * `yarn install`
 * `npm i jetifier`
 * `npx jetify`
@@ -12,7 +12,6 @@ defaults.project=zentcash
 defaults.org=zentcash
 auth.token=6efd75e3606a4552921b2610c1ebc42ec19d3440082b40b08fdd2db21069cf00
 ```
-
 
 ### Running
 
@@ -41,13 +40,13 @@ or `yarn deploy-android`
 
 ### Integrating QR Codes or URIs
 
-TonChan supports two kinds of QR codes.
+Zent Cash Mobile supports two kinds of QR codes.
 
 * Standard addresses / integrated addresses - This is simply the address encoded as a QR code.
 
-* turtlecoin:// URI encoded as a QR code.
+* zentcash:// URI encoded as a QR code.
 
-Your uri must being with `turtlecoin://` followed by the address to send to, for example, `turtlecoin://TRTLv2Fyavy8CXG8BPEbNeCHFZ1fuDCYCZ3vW5H5LXN4K2M2MHUpTENip9bbavpHvvPwb4NDkBWrNgURAd5DB38FHXWZyoBh4wW`
+Your uri must being with `zentcash://` followed by the address to send to, for example, `zentcash://Ze4qSTYgPABXiyh3Qak2gLRUXXCZzNaCC7qDDCdBqpLVjVduz6e6SFC16Eh9bd1cju9JDPhBDFRGz8HaAym5qvYV2fvQkkxtW`
 
 There are a few optional parameters.
 
@@ -58,9 +57,9 @@ There are a few optional parameters.
 An example of a URI containing all of the above parameters:
 
 ```
-turtlecoin://TRTLv2Fyavy8CXG8BPEbNeCHFZ1fuDCYCZ3vW5H5LXN4K2M2MHUpTENip9bbavpHvvPwb4NDkBWrNgURAd5DB38FHXWZyoBh4wW?amount=10000&name=Starbucks%20Coffee&paymentid=f13adc8ac78eb22ffcee3f82e0e9ffb251dc7dc0600ef599087a89b623ca1402
+zentcash://Ze4qSTYgPABXiyh3Qak2gLRUXXCZzNaCC7qDDCdBqpLVjVduz6e6SFC16Eh9bd1cju9JDPhBDFRGz8HaAym5qvYV2fvQkkxtW?amount=10000&name=Starbucks%20Coffee&paymentid=e1b0bb215fb4b7af6f41f0a325b59252f2836ec831c528d75703ffbf8966fe0d
 ```
 
-This would send `100 TRTL` (10000 in atomic units) to the address `TRTLv2Fyavy8CXG8BPEbNeCHFZ1fuDCYCZ3vW5H5LXN4K2M2MHUpTENip9bbavpHvvPwb4NDkBWrNgURAd5DB38FHXWZyoBh4wW`, using the name `Starbucks Coffee` (Note the URI encoding), and using a payment ID of `f13adc8ac78eb22ffcee3f82e0e9ffb251dc7dc0600ef599087a89b623ca1402`
+This would send `100 ZTC` (10000 in atomic units) to the address `Ze4qSTYgPABXiyh3Qak2gLRUXXCZzNaCC7qDDCdBqpLVjVduz6e6SFC16Eh9bd1cju9JDPhBDFRGz8HaAym5qvYV2fvQkkxtW`, using the name `Spanish Coffee` (Note the URI encoding), and using a payment ID of `e1b0bb215fb4b7af6f41f0a325b59252f2836ec831c528d75703ffbf8966fe0d`
 
 You can also just display the URI as a hyperlink. If a user clicks the link, it will open the app, and jump to the confirm screen, just as a QR code would function. (Provided all the fields are given)

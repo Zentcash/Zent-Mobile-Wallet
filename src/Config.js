@@ -168,7 +168,7 @@ const Config = new function() {
     /**
      * Address to send dev fee to
      */
-    this.devFeeAddress = 'Ze55uhNg8i3FbPqeGptkeGFqTYj21mW9ECSJxwDSmDutGJiuCUUZNpFdvoh9HZSx3uQfJuyD4Uf821p3FsweXuJj1MmBF9SNA';
+    this.devFeeAddress = 'Ze4S34axQcR1UGxe35smCzZP5jQpS5bfBCEubnz7K4VKRoaVLkdNy6A16Eh9bd1cju9JDPhBDFRGz8HaAym5qvYV2fvQnavLP';
 
     /**
      * Base url for price API
@@ -184,7 +184,7 @@ const Config = new function() {
      * or a ConventionalDaemon(url, port).
      * defaultDaemon: new Daemon('seedpro2.zent.cash', 21698, false, false),
      */
-    this.defaultDaemon = new Daemon('seedpro3.zent.cash', 443);
+    this.defaultDaemon = new Daemon('seedpro3.zent.cash', 443, true, true);
 
     /**
      * A link to where a bug can be reported for your wallet. Please update
