@@ -185,6 +185,8 @@ const Config = new function() {
      * defaultDaemon: new Daemon('seedpro2.zent.cash', 21698, false, false),
      */
     this.defaultDaemon = new Daemon('seedpro3.zent.cash', 443, true, true);
+    
+    // this.otherDaemon = new Daemon('seedpro2.zent.cash', 21698, false, false);
 
     /**
      * A link to where a bug can be reported for your wallet. Please update

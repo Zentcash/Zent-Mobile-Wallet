@@ -133,7 +133,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.tonchan"
+        applicationId "cash.zent.mobileapp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 104
