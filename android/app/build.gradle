@@ -136,8 +136,8 @@ android {
         applicationId "cash.zent.mobileapp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 104
-        versionName "v1.0.4"
+        versionCode 105
+        versionName "v1.0.5"
         ndk {
             abiFilters "armeabi-v7a", "x86", "arm64-v8a", "x86_64"
             moduleName "TurtleCoin_jni"

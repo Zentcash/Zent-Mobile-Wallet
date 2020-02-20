@@ -15,7 +15,7 @@ const Config = new function() {
     /**
      * If you can't figure this one out, I don't have high hopes
      */
-    this.coinName = 'ZentCash';
+    this.coinName = 'zent-cash';
 
     /**
      * Prefix for URI encoded addresses
@@ -52,7 +52,7 @@ const Config = new function() {
     /**
      * How often to process blocks, in millseconds
      */
-    this.syncThreadInterval = 4;
+    this.syncThreadInterval = 1;
 
     /**
      * How often to update the daemon info, in milliseconds
@@ -185,7 +185,7 @@ const Config = new function() {
      * defaultDaemon: new Daemon('seedpro2.zent.cash', 21698, false, false),
      */
     this.defaultDaemon = new Daemon('seedpro3.zent.cash', 443, true, true);
-    
+
     // this.otherDaemon = new Daemon('seedpro2.zent.cash', 21698, false, false);
 
     /**
@@ -200,7 +200,7 @@ const Config = new function() {
      */
     this.appName = 'Zent Cash Mobile Wallet';
 
-    /** 
+    /**
      * Customer user agent string for wallet backend requests
      */
     this.customUserAgentString = this.appName.toLowerCase() + '-da-greatest!';
@@ -213,13 +213,13 @@ const Config = new function() {
     /**
      * Displayed in the settings screen
      */
-    this.appVersion = 'v1.0.4';
+    this.appVersion = 'v1.0.5';
 
     /**
      * Base URL for us to chuck a hash on the end, and find a transaction
      */
-    this.explorerBaseURL = 'http://zent.cash/block-explorer-beta/?search=';
-
+    this.explorerBaseURL = 'https://explorer.zent.cash/?hash=';
+    this.explorerBaseURLblockchain = '#blockchain_transaction'
     /**
      * A link to your app on the Apple app store. Currently blank because we
      * haven't released for iOS yet...
