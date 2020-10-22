@@ -40,6 +40,7 @@ You need to bump the version number in:
 
 Then
 `cd android`
+`chmod +x gradlew`
 `./gradlew bundleRelease`
 Optionally
 `./gradlew installRelease`
