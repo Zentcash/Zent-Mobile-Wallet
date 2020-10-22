@@ -23,7 +23,7 @@ eliminar la carpeta .git --> Zent-Mobile-Wallet\node_modules\react-native-push-n
 ```text
 defaults.project=zentcash
 defaults.org=zentcash
-auth.token=6efd75e3606a4552921b2610c1ebc42ec19d3440082b40b08fdd2db21069cf00
+auth.token=<TOKEN>
 ```
 
 ### Install Android SDK
