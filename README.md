@@ -19,10 +19,11 @@ auth.token=6efd75e3606a4552921b2610c1ebc42ec19d3440082b40b08fdd2db21069cf00
 ```
 
 ### Install Android SDK
-`sudo snap install androidsdk`
-`androidsdk "platform-tools" "platforms;android-28"`
-`export ANDROID_SDK_ROOT=/root/snap/androidsdk/30/AndroidSDK`
-
+```bash
+sudo snap install androidsdk
+androidsdk "platform-tools" "platforms;android-28"
+export ANDROID_SDK_ROOT=/root/snap/androidsdk/30/AndroidSDK
+```
 
 ### Running
 
