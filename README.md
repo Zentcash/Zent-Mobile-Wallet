@@ -1,4 +1,4 @@
-# Zent Cash Movile - A mobile, native Zent Cash wallet
+# Zent Cash Mobile - A mobile, native Zent Cash wallet
 
 ### Initial Setup
 
