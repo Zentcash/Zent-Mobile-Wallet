@@ -28,6 +28,7 @@ auth.token=<TOKEN>
 
 ### Install Android SDK
 ```bash
+sudo apt install snapd
 sudo snap install androidsdk
 androidsdk "platform-tools" "platforms;android-28"
 export ANDROID_SDK_ROOT=/root/snap/androidsdk/30/AndroidSDK
