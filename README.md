@@ -36,6 +36,7 @@ export ANDROID_SDK_ROOT=/root/snap/androidsdk/30/AndroidSDK
 
 ### Running
 
+* `npm install -g react-native-cli`
 * `node --max-old-space-size=8192 node_modules/react-native/local-cli/cli.js start` (Just need to run this once to start the server, leave it running)
 * `react-native run-android`
 
