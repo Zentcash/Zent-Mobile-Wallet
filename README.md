@@ -14,7 +14,7 @@ sudo apt update && sudo apt install yarn
 * `yarn install`
 
 ### Borrar carpeta .git 
-eliminar la carpeta .git --> Zent-Mobile-Wallet\node_modules\react-native-push-notification\.git
+eliminar la carpeta .git --> ```Zent-Mobile-Wallet\node_modules\react-native-push-notification\.git```
 
 * `npm i jetifier`
 * `npx jetify`
